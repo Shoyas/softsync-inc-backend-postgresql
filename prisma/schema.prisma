@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id           Int            @id @default(autoincrement())
+  username     String
+  password     String
+  securityCode Int
+  adminImg     String?
+  role         AdminRoleEnum? @default(admin)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  Blog         Blog?
+
+  @@map("admins")
+}
+
+enum AdminRoleEnum {
+  super_admin
+  admin
+}
+
+model Blog {
+  id          Int      @id @default(autoincrement())
+  email       String
+  blogTitle   String
+  blogContent String
+  blogImg     String?
+  blogStatus  Boolean  @default(true)
+  author      Admin    @relation(fields: [authorId], references: [id])
+  authorId    Int      @unique
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("blogs")
+}
+
+model EmailRecord {
+  id        Int      @id @default(autoincrement())
+  emailName String
+  emailData String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("email_records")
+}
+
+model Visitor {
+  id           Int      @id @default(autoincrement())
+  ip           String
+  browser_name String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("visitors")
+}

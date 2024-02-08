@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\successes\\.7b2f980ef118003607f647eb08bae7232e6a7b9a-audit.json",
+    "files": [
+        {
+            "date": 1707284509819,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\successes\\zaran-it-2024-07-02-11-success.log",
+            "hash": "ccf9cf0bd50d9b1e9441595075eb9d708647ae9bdd64bdcdfefb2f8c3e0deda9"
+        },
+        {
+            "date": 1707288439549,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\successes\\zaran-it-2024-07-02-12-success.log",
+            "hash": "cdee6481f28cd75052fc6c94f560b6078cadd6799161cea9c47582bf22be2d57"
+        },
+        {
+            "date": 1707293049682,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\successes\\zaran-it-2024-07-02-14-success.log",
+            "hash": "b3ee15aa9cdc515c5a723ee1d3d69e46b63bdab86ea22661ce3015209f7b2a12"
+        },
+        {
+            "date": 1707376353062,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\successes\\zaran-it-2024-08-02-13-success.log",
+            "hash": "4144b3d3957959579a57fc5c58d3ba0850b22f952f754444e5d22de052065ef2"
+        },
+        {
+            "date": 1707381816035,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\successes\\zaran-it-2024-08-02-14-success.log",
+            "hash": "7aac6ec05a9f68d0779ae84e4c052a45aedf6a6ad881c63c97a24c7ca59e0051"
+        }
+    ],
+    "hashType": "sha256"
+}
