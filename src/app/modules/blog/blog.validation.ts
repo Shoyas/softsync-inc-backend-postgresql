@@ -13,6 +13,14 @@ const createBlogValidation = z.object({
   }),
 });
 
+const updateBlogValidation = z.object({
+  body: z.object({
+    blogTitle: z.string().optional(),
+    blogContent: z.string().optional(),
+  }),
+});
+
 export const BlogValidation = {
   createBlogValidation,
+  updateBlogValidation,
 };

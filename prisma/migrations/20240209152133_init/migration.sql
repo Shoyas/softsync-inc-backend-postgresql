@@ -18,7 +18,6 @@ CREATE TABLE "admins" (
 -- CreateTable
 CREATE TABLE "blogs" (
     "id" TEXT NOT NULL,
-    "email" TEXT NOT NULL,
     "blogTitle" TEXT NOT NULL,
     "blogContent" TEXT NOT NULL,
     "blogImg" TEXT,
