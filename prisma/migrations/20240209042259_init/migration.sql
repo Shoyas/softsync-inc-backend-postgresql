@@ -1,9 +1,14 @@
+-- CreateEnum
+CREATE TYPE "AdminRoleEnum" AS ENUM ('super_admin', 'admin');
+
 -- CreateTable
 CREATE TABLE "admins" (
     "id" SERIAL NOT NULL,
-    "username" TEXT NOT NULL,
+    "userName" TEXT NOT NULL,
     "password" TEXT NOT NULL,
     "securityCode" INTEGER NOT NULL,
+    "adminImg" TEXT,
+    "role" "AdminRoleEnum" DEFAULT 'admin',
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
@@ -14,7 +19,9 @@ CREATE TABLE "admins" (
 CREATE TABLE "blogs" (
     "id" SERIAL NOT NULL,
     "email" TEXT NOT NULL,
-    "blogData" TEXT NOT NULL,
+    "blogTitle" TEXT NOT NULL,
+    "blogContent" TEXT NOT NULL,
+    "blogImg" TEXT,
     "blogStatus" BOOLEAN NOT NULL DEFAULT true,
     "authorId" INTEGER NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,

@@ -29,6 +29,11 @@
             "date": 1707381816080,
             "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-08-02-14-error.log",
             "hash": "1b2d6c79180d3dff9b44670a5fddf518ed7d5768f73757923f0e1e6dd4dedf3f"
+        },
+        {
+            "date": 1707451750357,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-10-error.log",
+            "hash": "38ca5812c554d11af4f92e755874143df6394f525106d063334964691a0768f9"
         }
     ],
     "hashType": "sha256"

@@ -12,7 +12,7 @@ datasource db {
 
 model Admin {
   id           Int            @id @default(autoincrement())
-  username     String
+  userName     String
   password     String
   securityCode Int
   adminImg     String?
