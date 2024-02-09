@@ -25,6 +25,40 @@ const loginAdmin = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleAdminByToken = catchAsync(
+  async (req: Request, res: Response) => {
+    const token = req.headers.authorization;
+    if (!token) {
+      return res.status(httpStatus.FORBIDDEN).json({
+        message: 'Token is not founded in headers',
+      });
+    }
+    const tokenString = Array.isArray(token) ? token[0] : token.toString();
+
+    const result = await AuthService.getSingleAdminByToken(tokenString);
+    sendResponse(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: 'Admin is retrieved successfully',
+      data: result,
+    });
+  }
+);
+
+const changePassword = catchAsync(async (req: Request, res: Response) => {
+  const admin = req.user;
+  const { ...passwordData } = req.body;
+  const result = await AuthService.changePassword(admin, passwordData);
+  sendResponse(res, {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: 'Password change successfully',
+    data: result,
+  });
+});
+
 export const AuthController = {
   loginAdmin,
+  getSingleAdminByToken,
+  changePassword,
 };
