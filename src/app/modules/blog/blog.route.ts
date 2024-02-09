@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post(
   '/create-blog',
-  //   auth(ENUM_ADMIN_ROLE.ADMIN, ENUM_ADMIN_ROLE.SUPER_ADMIN),
+  //!   auth(ENUM_ADMIN_ROLE.ADMIN, ENUM_ADMIN_ROLE.SUPER_ADMIN),
   FileUploadHelper.upload.single('file'),
   (req: Request, res: Response, next: NextFunction) => {
     req.body = BlogValidation.createBlogValidation.parse(

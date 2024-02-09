@@ -3,7 +3,7 @@ CREATE TYPE "AdminRoleEnum" AS ENUM ('super_admin', 'admin');
 
 -- CreateTable
 CREATE TABLE "admins" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "userName" TEXT NOT NULL,
     "password" TEXT NOT NULL,
     "securityCode" INTEGER NOT NULL,
@@ -17,13 +17,13 @@ CREATE TABLE "admins" (
 
 -- CreateTable
 CREATE TABLE "blogs" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "blogTitle" TEXT NOT NULL,
     "blogContent" TEXT NOT NULL,
     "blogImg" TEXT,
     "blogStatus" BOOLEAN NOT NULL DEFAULT true,
-    "authorId" INTEGER NOT NULL,
+    "authorId" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
@@ -32,7 +32,7 @@ CREATE TABLE "blogs" (
 
 -- CreateTable
 CREATE TABLE "email_records" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "emailName" TEXT NOT NULL,
     "emailData" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -43,7 +43,7 @@ CREATE TABLE "email_records" (
 
 -- CreateTable
 CREATE TABLE "visitors" (
-    "id" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "ip" TEXT NOT NULL,
     "browser_name" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -51,6 +51,9 @@ CREATE TABLE "visitors" (
 
     CONSTRAINT "visitors_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateIndex
+CREATE UNIQUE INDEX "admins_userName_key" ON "admins"("userName");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "blogs_authorId_key" ON "blogs"("authorId");
