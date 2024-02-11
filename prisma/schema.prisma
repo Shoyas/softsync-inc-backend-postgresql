@@ -40,6 +40,45 @@ model Blog {
   @@map("blogs")
 }
 
+model Work {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  workImg     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("works")
+}
+
+model TeamMember {
+  id          String   @id @default(uuid())
+  name        String
+  designation String
+  linkedin    String?
+  github      String?
+  email       String?
+  portfolio   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("team-members")
+}
+
+model Founder {
+  id          String   @id @default(uuid())
+  name        String
+  designation String
+  linkedin    String?
+  github      String?
+  email       String?
+  portfolio   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("founders")
+}
+
 model EmailRecord {
   id        String   @id @default(uuid())
   emailName String
