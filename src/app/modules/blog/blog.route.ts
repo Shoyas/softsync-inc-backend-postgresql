@@ -6,7 +6,7 @@ import validateRequest from '../../middlewares/validateRequest';
 import { BlogController } from './blog.controller';
 import { BlogValidation } from './blog.validation';
 
-const router = express.Router();
+const router = express.Router(); 
 
 router.get('/:id', BlogController.getSingleBlog);
 router.get('/', BlogController.getAllBlog);

@@ -94,6 +94,16 @@
             "date": 1707732587525,
             "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-16-error.log",
             "hash": "3ef3a738695f019bb7855fb047ceeb083c1e2355a2a6d9703074806c9c5ffc73"
+        },
+        {
+            "date": 1707741523128,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-18-error.log",
+            "hash": "efe8a0bf206b6f370d0fef784c366b8039ca3c8e8a4b5393763a3fd420912ee3"
+        },
+        {
+            "date": 1707743470156,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-19-error.log",
+            "hash": "98e8739c2d9bba374d7fe1c38cf2726aceb7965e503d868540dd145eaf1c046d"
         }
     ],
     "hashType": "sha256"
