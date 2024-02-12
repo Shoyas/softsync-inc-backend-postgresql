@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Blog, Prisma } from '@prisma/client';
+import { Prisma, TeamMember } from '@prisma/client';
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
 import { FileUploadHelper } from '../../../helpers/FileUploadHelper';
@@ -8,18 +8,23 @@ import { IGenericResponse } from '../../../interfaces/common';
 import { IUploadFile } from '../../../interfaces/file';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
-import { blogSearchableFields } from './blog.constant';
-import { IBlogFilters } from './blog.interface';
+import { teamMemberSearchableFields } from './teamMember.constant';
+import { ITeamMemberFilters } from './teamMember.interface';
 
-const createBlog = async (blogData: Blog, file: IUploadFile): Promise<Blog> => { 
-  const uploadedBlogImage = await FileUploadHelper.uploadToCloudinary(file);
-  if (!uploadedBlogImage) {
+const createTeamMember = async (
+  teamMemberData: TeamMember,
+  file: IUploadFile
+): Promise<TeamMember> => {
+  const uploadedTeamPersonImage = await FileUploadHelper.uploadToCloudinary(
+    file
+  );
+  if (!uploadedTeamPersonImage) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Image upload failed');
   }
-  const result = await prisma.blog.create({
+  const result = await prisma.teamMember.create({
     data: {
-      ...blogData,
-      blogImg: uploadedBlogImage.secure_url as string,
+      ...teamMemberData,
+      teamPersonImg: uploadedTeamPersonImage.secure_url as string,
     },
     include: {
       author: true,
@@ -29,18 +34,17 @@ const createBlog = async (blogData: Blog, file: IUploadFile): Promise<Blog> => {
   return result;
 };
 
-const getAllBlog = async (
-  filters: IBlogFilters,
+const getAllTeamMember = async (
+  filters: ITeamMemberFilters,
   paginationOptions: IPaginationOptions
-): Promise<IGenericResponse<Blog[]>> => {
+): Promise<IGenericResponse<TeamMember[]>> => {
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(paginationOptions);
   const { searchTerm, ...filtersData } = filters;
   const andConditions = [];
-
   if (searchTerm) {
     andConditions.push({
-      OR: blogSearchableFields.map(field => ({
+      OR: teamMemberSearchableFields.map(field => ({
         [field]: {
           contains: searchTerm,
           mode: 'insensitive',
@@ -48,6 +52,7 @@ const getAllBlog = async (
       })),
     });
   }
+
   if (Object.keys(filtersData).length > 0) {
     andConditions.push({
       AND: Object.entries(filtersData).map(([field, value]) => ({
@@ -55,18 +60,19 @@ const getAllBlog = async (
       })),
     });
   }
+
   const sortConditions: any = {};
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
-  const whereConditions: Prisma.BlogWhereInput =
+  const whereConditions: Prisma.TeamMemberWhereInput =
     andConditions.length > 0
       ? {
           AND: andConditions,
         }
       : {};
 
-  const result = await prisma.blog.findMany({
+  const result = await prisma.teamMember.findMany({
     include: {
       author: true,
     },
@@ -78,7 +84,7 @@ const getAllBlog = async (
     },
   });
 
-  const total = await prisma.blog.count({
+  const total = await prisma.teamMember.count({
     where: whereConditions,
   });
 
@@ -92,8 +98,8 @@ const getAllBlog = async (
   };
 };
 
-const getSingleBlog = async (id: string): Promise<Blog | null> => {
-  const result = await prisma.blog.findUnique({
+const getSingleTeamMember = async (id: string): Promise<TeamMember | null> => {
+  const result = await prisma.teamMember.findUnique({
     where: {
       id: id,
     },
@@ -104,11 +110,11 @@ const getSingleBlog = async (id: string): Promise<Blog | null> => {
   return result;
 };
 
-const updateBlog = async (
+const updateTeamMember = async (
   id: string,
-  payload: Partial<Blog>
-): Promise<Blog> => {
-  const result = await prisma.blog.update({
+  payload: Partial<TeamMember>
+): Promise<TeamMember> => {
+  const result = await prisma.teamMember.update({
     where: {
       id: id,
     },
@@ -120,8 +126,8 @@ const updateBlog = async (
   return result;
 };
 
-const deleteBlog = async (id: string): Promise<Blog> => {
-  const result = await prisma.blog.delete({
+const deleteTeamMember = async (id: string): Promise<TeamMember> => {
+  const result = await prisma.teamMember.delete({
     where: {
       id: id,
     },
@@ -132,10 +138,10 @@ const deleteBlog = async (id: string): Promise<Blog> => {
   return result;
 };
 
-export const BlogService = {
-  createBlog,
-  getAllBlog,
-  getSingleBlog,
-  updateBlog,
-  deleteBlog,
+export const TeamMemberService = {
+  createTeamMember,
+  getAllTeamMember,
+  getSingleTeamMember,
+  updateTeamMember,
+  deleteTeamMember,
 };

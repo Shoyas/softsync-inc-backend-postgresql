@@ -3,35 +3,36 @@ import { ENUM_ADMIN_ROLE } from '../../../enums/admin';
 import { FileUploadHelper } from '../../../helpers/FileUploadHelper';
 import auth from '../../middlewares/auth';
 import validateRequest from '../../middlewares/validateRequest';
-import { BlogController } from './blog.controller';
-import { BlogValidation } from './blog.validation';
+import { TeamMemberController } from './teamMember.controller';
+import { TeamMemberValidation } from './teamMember.validation';
 
-const router = express.Router(); 
+const router = express.Router();
 
-router.get('/:id', BlogController.getSingleBlog);
-router.get('/', BlogController.getAllBlog);
+router.get('/:id', TeamMemberController.getSingleTeamMember);
+router.get('/', TeamMemberController.getAllTeamMember);
 router.post(
-  '/create-blog',
+  '/create-team-member',
   auth(ENUM_ADMIN_ROLE.ADMIN, ENUM_ADMIN_ROLE.SUPER_ADMIN),
   FileUploadHelper.upload.single('file'),
   (req: Request, res: Response, next: NextFunction) => {
-    req.body = BlogValidation.createBlogValidation.parse(
+    req.body = TeamMemberValidation.createTeamMemberValidation.parse(
       JSON.parse(req.body.data)
     );
-    return BlogController.createBlog(req, res, next);
+    return TeamMemberController.createTeamMember(req, res, next);
   }
 );
+
 router.patch(
   '/:id',
   auth(ENUM_ADMIN_ROLE.ADMIN, ENUM_ADMIN_ROLE.SUPER_ADMIN),
-  validateRequest(BlogValidation.updateBlogValidation),
-  BlogController.updateBlog
+  validateRequest(TeamMemberValidation.updateTeamMemberValidation),
+  TeamMemberController.updateTeamMember
 );
 
 router.delete(
   '/:id',
   auth(ENUM_ADMIN_ROLE.ADMIN, ENUM_ADMIN_ROLE.SUPER_ADMIN),
-  BlogController.deleteBlog
+  TeamMemberController.deleteTeamMember
 );
 
-export const BlogRoute = router;
+export const TeamMemberRoute = router;

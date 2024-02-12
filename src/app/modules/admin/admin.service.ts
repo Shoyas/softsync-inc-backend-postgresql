@@ -13,7 +13,10 @@ import prisma from '../../../shared/prisma';
 import { adminSearchableFields } from './admin.constant';
 import { IAdminFilters } from './admin.interface';
 
-const createAdmin = async (adminData: Admin, file: IUploadFile) => {
+const createAdmin = async (
+  adminData: Admin,
+  file: IUploadFile
+): Promise<Admin> => {
   //! Hashing password
   adminData.password = await bcrypt.hash(
     adminData.password,

@@ -17,6 +17,9 @@ model Admin {
   createdAt    DateTime       @default(now())
   updatedAt    DateTime       @updatedAt
   Blog         Blog[]
+  Work         Work[]
+  Founder      Founder[]
+  TeamMember   TeamMember[]
 
   @@map("admins")
 }
@@ -38,6 +41,53 @@ model Blog {
   updatedAt   DateTime @updatedAt
 
   @@map("blogs")
+}
+
+model Work {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  workImg     String?
+  author      Admin    @relation(fields: [authorId], references: [id])
+  authorId    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("works")
+}
+
+model TeamMember {
+  id            String   @id @default(uuid())
+  name          String
+  teamPersonImg String?
+  designation   String
+  linkedin      String?
+  github        String?
+  email         String?
+  portfolio     String?
+  author        Admin    @relation(fields: [authorId], references: [id])
+  authorId      String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("team-members")
+}
+
+model Founder {
+  id               String   @id @default(uuid())
+  name             String
+  designation      String
+  founderPersonImg String?
+  linkedin         String?
+  github           String?
+  email            String?
+  portfolio        String?
+  author           Admin    @relation(fields: [authorId], references: [id])
+  authorId         String
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("founders")
 }
 
 model EmailRecord {
