@@ -17,6 +17,9 @@ model Admin {
   createdAt    DateTime       @default(now())
   updatedAt    DateTime       @updatedAt
   Blog         Blog[]
+  Work         Work[]
+  Founder      Founder[]
+  TeamMember   TeamMember[]
 
   @@map("admins")
 }
@@ -45,6 +48,8 @@ model Work {
   title       String
   description String
   workImg     String?
+  author      Admin    @relation(fields: [authorId], references: [id])
+  authorId    String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
@@ -52,29 +57,35 @@ model Work {
 }
 
 model TeamMember {
-  id          String   @id @default(uuid())
-  name        String
-  designation String
-  linkedin    String?
-  github      String?
-  email       String?
-  portfolio   String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id            String   @id @default(uuid())
+  name          String
+  teamPersonImg String?
+  designation   String
+  linkedin      String?
+  github        String?
+  email         String?
+  portfolio     String?
+  author        Admin    @relation(fields: [authorId], references: [id])
+  authorId      String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 
   @@map("team-members")
 }
 
 model Founder {
-  id          String   @id @default(uuid())
-  name        String
-  designation String
-  linkedin    String?
-  github      String?
-  email       String?
-  portfolio   String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id               String   @id @default(uuid())
+  name             String
+  designation      String
+  founderPersonImg String?
+  linkedin         String?
+  github           String?
+  email            String?
+  portfolio        String?
+  author           Admin    @relation(fields: [authorId], references: [id])
+  authorId         String
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 
   @@map("founders")
 }
