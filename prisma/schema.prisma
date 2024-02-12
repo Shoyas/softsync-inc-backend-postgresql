@@ -92,8 +92,9 @@ model Founder {
 
 model EmailRecord {
   id        String   @id @default(uuid())
-  emailName String
-  emailData String
+  email     String
+  name      String
+  message   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
