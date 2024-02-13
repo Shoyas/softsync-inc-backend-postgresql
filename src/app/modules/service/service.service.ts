@@ -1,38 +1,28 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Blog, Prisma } from '@prisma/client';
-import httpStatus from 'http-status';
-import ApiError from '../../../errors/ApiError';
-import { FileUploadHelper } from '../../../helpers/FileUploadHelper';
+import { Prisma, Service } from '@prisma/client';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
-import { IUploadFile } from '../../../interfaces/file';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
-import { blogSearchableFields } from './blog.constant';
-import { IBlogFilters } from './blog.interface';
+import { serviceSearchableFields } from './service.constant';
+import { IServiceFilters } from './service.interface';
 
-const createBlog = async (blogData: Blog, file: IUploadFile): Promise<Blog> => { 
-  const uploadedBlogImage = await FileUploadHelper.uploadToCloudinary(file);
-  if (!uploadedBlogImage) {
-    throw new ApiError(httpStatus.BAD_REQUEST, 'Image upload failed');
-  }
-  const result = await prisma.blog.create({
-    data: {
-      ...blogData,
-      blogImg: uploadedBlogImage.secure_url as string,
-    },
+const createService = async (serviceData: Service): Promise<Service> => {
+  const result = await prisma.service.create({
+    data: serviceData,
     include: {
       author: true,
+      category: true,
     },
   });
 
   return result;
 };
 
-const getAllBlog = async (
-  filters: IBlogFilters,
+const getAllService = async (
+  filters: IServiceFilters,
   paginationOptions: IPaginationOptions
-): Promise<IGenericResponse<Blog[]>> => {
+): Promise<IGenericResponse<Service[]>> => {
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(paginationOptions);
   const { searchTerm, ...filtersData } = filters;
@@ -40,7 +30,7 @@ const getAllBlog = async (
 
   if (searchTerm) {
     andConditions.push({
-      OR: blogSearchableFields.map(field => ({
+      OR: serviceSearchableFields.map(field => ({
         [field]: {
           contains: searchTerm,
           mode: 'insensitive',
@@ -59,16 +49,17 @@ const getAllBlog = async (
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
-  const whereConditions: Prisma.BlogWhereInput =
+  const whereConditions: Prisma.ServiceWhereInput =
     andConditions.length > 0
       ? {
           AND: andConditions,
         }
       : {};
 
-  const result = await prisma.blog.findMany({
+  const result = await prisma.service.findMany({
     include: {
       author: true,
+      category: true,
     },
     where: whereConditions,
     skip,
@@ -78,7 +69,7 @@ const getAllBlog = async (
     },
   });
 
-  const total = await prisma.blog.count({
+  const total = await prisma.service.count({
     where: whereConditions,
   });
 
@@ -92,50 +83,53 @@ const getAllBlog = async (
   };
 };
 
-const getSingleBlog = async (id: string): Promise<Blog | null> => {
-  const result = await prisma.blog.findUnique({
+const getSingleService = async (id: string): Promise<Service | null> => {
+  const result = await prisma.service.findUnique({
     where: {
       id: id,
     },
     include: {
       author: true,
+      category: true,
     },
   });
   return result;
 };
 
-const updateBlog = async (
+const updateService = async (
   id: string,
-  payload: Partial<Blog>
-): Promise<Blog> => {
-  const result = await prisma.blog.update({
+  payload: Partial<Service>
+): Promise<Service> => {
+  const result = await prisma.service.update({
     where: {
       id: id,
     },
     include: {
       author: true,
+      category: true,
     },
     data: payload,
   });
-  return result; 
+  return result;
 };
 
-const deleteBlog = async (id: string): Promise<Blog> => {
-  const result = await prisma.blog.delete({
+const deleteService = async (id: string): Promise<Service> => {
+  const result = await prisma.service.delete({
     where: {
       id: id,
     },
     include: {
       author: true,
+      category: true,
     },
   });
   return result;
 };
 
-export const BlogService = {
-  createBlog,
-  getAllBlog,
-  getSingleBlog,
-  updateBlog,
-  deleteBlog,
+export const ServiceService = {
+  createService,
+  getAllService,
+  getSingleService,
+  updateService,
+  deleteService,
 };

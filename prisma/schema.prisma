@@ -20,6 +20,7 @@ model Admin {
   Work         Work[]
   Founder      Founder[]
   TeamMember   TeamMember[]
+  Service      Service[]
 
   @@map("admins")
 }
@@ -41,6 +42,31 @@ model Blog {
   updatedAt   DateTime @updatedAt
 
   @@map("blogs")
+}
+
+model Category {
+  id                  String    @id @default(uuid())
+  categoryTitle       String
+  categoryDescription String
+  categoryImg         String?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  Service             Service[]
+
+  @@map("categories")
+}
+
+model Service {
+  id           String   @id @default(uuid())
+  serviceTitle String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  category     Category @relation(fields: [categoryId], references: [id])
+  categoryId   String
+  author       Admin    @relation(fields: [authorId], references: [id])
+  authorId     String
+
+  @@map("services")
 }
 
 model Work {

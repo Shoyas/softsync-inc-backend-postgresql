@@ -11,7 +11,7 @@ const createBlogValidation = z.object({
   authorId: z.string({
     required_error: 'Admin ID is required',
   }), 
-});
+}); 
 
 const updateBlogValidation = z.object({
   body: z.object({
