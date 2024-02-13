@@ -5,6 +5,7 @@ import { BlogRoute } from '../modules/blog/blog.route';
 import { EmailRecordRoute } from '../modules/emailRecord/emailRecord.route';
 import { FounderRoute } from '../modules/founder/founder.route';
 import { TeamMemberRoute } from '../modules/teamMember/teamMember.route';
+import { VisitorRoute } from '../modules/visitor/visitor.route';
 import { WorkRoute } from '../modules/work/work.route';
 
 const router = express.Router();
@@ -37,6 +38,10 @@ const moduleRoutes = [
   {
     path: '/email-records',
     route: EmailRecordRoute,
+  },
+  {
+    path: '/visitors',
+    route: VisitorRoute,
   },
 ];
 

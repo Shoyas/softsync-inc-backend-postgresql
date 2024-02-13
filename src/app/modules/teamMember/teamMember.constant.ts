@@ -5,3 +5,4 @@ export const teamMemberFilterableFields: string[] = [
   'page',
   'size',
 ];
+ 
