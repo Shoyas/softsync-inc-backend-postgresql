@@ -8,7 +8,13 @@ import cookieParser from 'cookie-parser';
 
 const app: Application = express();
 
-app.use(cors());
+//! cors add for frontend api to server api connection. This will be change after final deploy link
+app.use(
+  cors({
+    origin: ['http://localhost:3000'],
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 
 //! parser
