@@ -44,7 +44,7 @@ const getSingleAdminByToken = catchAsync(
     });
   }
 );
-
+ 
 const changePassword = catchAsync(async (req: Request, res: Response) => {
   const admin = req.user;
   const { ...passwordData } = req.body;

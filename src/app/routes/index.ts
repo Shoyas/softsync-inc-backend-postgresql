@@ -1,6 +1,6 @@
 import express from 'express';
 import { AdminRoute } from '../modules/admin/admin.route';
-import { AuthRoute } from '../modules/auth/auth.roue';
+import { AuthRoute } from '../modules/auth/auth.route';
 import { BlogRoute } from '../modules/blog/blog.route';
 import { CategoryRoute } from '../modules/category/category.route';
 import { EmailRecordRoute } from '../modules/emailRecord/emailRecord.route';
