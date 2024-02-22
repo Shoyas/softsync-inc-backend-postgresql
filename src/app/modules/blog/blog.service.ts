@@ -10,7 +10,7 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
 import { blogSearchableFields } from './blog.constant';
 import { IBlogFilters } from './blog.interface';
-
+ 
 const createBlog = async (blogData: Blog, file: IUploadFile): Promise<Blog> => { 
   const uploadedBlogImage = await FileUploadHelper.uploadToCloudinary(file);
   if (!uploadedBlogImage) {

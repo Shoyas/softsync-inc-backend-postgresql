@@ -1,4 +1,3 @@
 export const blogSearchableFields = ['blogTitle', 'blogContent', 'authorId'];
 
-export const blogFilterableFields: string[] = ['searchTerm', 'page', 'size'];
-  
+export const blogFilterableFields: string[] = ['searchTerm'];

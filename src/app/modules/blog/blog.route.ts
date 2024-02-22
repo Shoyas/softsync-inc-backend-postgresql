@@ -13,13 +13,14 @@ router.get('/', BlogController.getAllBlog);
 router.post(
   '/create-blog',
   auth(ENUM_ADMIN_ROLE.ADMIN, ENUM_ADMIN_ROLE.SUPER_ADMIN),
+  
   FileUploadHelper.upload.single('file'),
   (req: Request, res: Response, next: NextFunction) => {
     req.body = BlogValidation.createBlogValidation.parse(
       JSON.parse(req.body.data)
     );
     return BlogController.createBlog(req, res, next);
-  }
+  } 
 );
 router.patch(
   '/:id',

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Prisma, Work } from '@prisma/client';
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
@@ -37,7 +38,7 @@ const getAllWork = async (
     paginationHelpers.calculatePagination(paginationOptions);
   const { searchTerm, ...filtersData } = filters;
   const andConditions = [];
-
+  console.log(page);
   if (searchTerm) {
     andConditions.push({
       OR: workSearchableFields.map(field => ({
