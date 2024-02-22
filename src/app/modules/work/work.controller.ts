@@ -24,8 +24,6 @@ const getAllWork = catchAsync(async (req: Request, res: Response) => {
   const filters = pick(req.query, workFilterableFields);
   const paginationOptions = pick(req.query, paginationFields);
 
-  console.log(paginationOptions);
-  console.log(filters);
   const result = await WorkService.getAllWork(filters, paginationOptions);
   sendResponse(res, {
     success: true,
