@@ -5,6 +5,7 @@ import { EmailRecordValidation } from './emailRecord.validation';
 
 const router = express.Router();
 
+router.get('/:id', EmailRecordController.getSingleEmailRecord);
 router.get('/', EmailRecordController.getAllEmailRecord);
 router.post(
   '/create-email-record',

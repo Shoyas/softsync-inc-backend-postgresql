@@ -6,156 +6,6 @@
     "auditLog": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\.771eb3e9f1a3bc8276dce73ecc144016bdedee6a-audit.json",
     "files": [
         {
-            "date": 1707451750357,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-10-error.log",
-            "hash": "38ca5812c554d11af4f92e755874143df6394f525106d063334964691a0768f9"
-        },
-        {
-            "date": 1707455013309,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-11-error.log",
-            "hash": "f5adad0934dfb55443c11e07fc719f76e14fa863529ce0030a8b95fc9b1deba2"
-        },
-        {
-            "date": 1707459341625,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-12-error.log",
-            "hash": "21ad72a0dec1208a0b1a4a462e225c053a162f212fb5771c723a6c8bf2170067"
-        },
-        {
-            "date": 1707465731676,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-14-error.log",
-            "hash": "17ff91c7e8a8a50cbdd9307f2fc989e3e93cd02c6cfc358114c9988f9064f579"
-        },
-        {
-            "date": 1707477695417,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-17-error.log",
-            "hash": "0e866e12890dfe6d803ec82e78c84eddd300631fe504d648d49f02c38d50aec1"
-        },
-        {
-            "date": 1707480064032,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-18-error.log",
-            "hash": "f42a29cb02e04ac5f9cb8e28b0a7bebbfa663cc088ce1bb50471068c7fad515e"
-        },
-        {
-            "date": 1707483678799,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-19-error.log",
-            "hash": "1a935922a3969b80f6dba0e91a6312cf14ec299e055b5e529386949fc2b7d968"
-        },
-        {
-            "date": 1707487201922,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-20-error.log",
-            "hash": "fa84da6c8f01a5d8842728a154227d19705cb45f4376f4db577ea9f34c965819"
-        },
-        {
-            "date": 1707491449556,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-21-error.log",
-            "hash": "0836845677372fbfb900daf1443e5dca192738c216884a56637c8f8ead7e1344"
-        },
-        {
-            "date": 1707496267064,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-22-error.log",
-            "hash": "439dcb9747188b68647ad189683fc67698366033dfde949a400bfc2dcd2d6564"
-        },
-        {
-            "date": 1707498054879,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-09-02-23-error.log",
-            "hash": "4e978757bab64aaaf1af3dfe43fd291fab9887b7ecc09b7ab0276d53ff44e831"
-        },
-        {
-            "date": 1707728732178,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-15-error.log",
-            "hash": "174a12a0ae36bcf4f3392b050b03755698932d6806408690257a16e617b64b80"
-        },
-        {
-            "date": 1707732587525,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-16-error.log",
-            "hash": "3ef3a738695f019bb7855fb047ceeb083c1e2355a2a6d9703074806c9c5ffc73"
-        },
-        {
-            "date": 1707741523128,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-18-error.log",
-            "hash": "efe8a0bf206b6f370d0fef784c366b8039ca3c8e8a4b5393763a3fd420912ee3"
-        },
-        {
-            "date": 1707743470156,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-19-error.log",
-            "hash": "98e8739c2d9bba374d7fe1c38cf2726aceb7965e503d868540dd145eaf1c046d"
-        },
-        {
-            "date": 1707749577000,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-20-error.log",
-            "hash": "0ab8159c5c6fe9c09b559a3c165495db1f2410253f5e272f8cae93154c35e2a9"
-        },
-        {
-            "date": 1707753089757,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-21-error.log",
-            "hash": "16774f1ab56443a8bd1cb114b2284e3276bac7ba9836de3335dc79c359ac123b"
-        },
-        {
-            "date": 1707754031539,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-12-02-22-error.log",
-            "hash": "1b805ab1e413171c1877e6e429b52e5ab6735f0ef3b1ec26a1763ee1100c4339"
-        },
-        {
-            "date": 1707798448735,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-13-02-10-error.log",
-            "hash": "6395a69babafab5c8ab4b3580567cdf02e09626efad762cd6e25fb182ba6dd2f"
-        },
-        {
-            "date": 1707805888226,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-13-02-12-error.log",
-            "hash": "2805240361d7ca9d000ee86bd8c368e32e08dc9fd39ae7b09a9b3663f09247af"
-        },
-        {
-            "date": 1707818698596,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-13-02-16-error.log",
-            "hash": "2f9abc2ccf54c6d2e27f1eabdda808e8bbc1770334e2ec77056b2f7b191c52e5"
-        },
-        {
-            "date": 1707822071493,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-13-02-17-error.log",
-            "hash": "5e85344c961d40054d07ef9253cb7c2ccac9179d5f45c9343f33da36e5567e0c"
-        },
-        {
-            "date": 1707834206316,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-13-02-20-error.log",
-            "hash": "2b370bc9b199456f0f7f9ffcfe6a7e178bf1f949923e612ff67ac8660fa705c3"
-        },
-        {
-            "date": 1707874730955,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-14-02-07-error.log",
-            "hash": "ec3b6f6e54d2cd3295ee091ee109217018677f0c883aff8a415a742bc114e5fb"
-        },
-        {
-            "date": 1707901074998,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-14-02-14-error.log",
-            "hash": "68a8bce885df212b06b4598bdcfcb1b10299d6af69ecae25d1724f23c2a57895"
-        },
-        {
-            "date": 1707908228598,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-14-02-16-error.log",
-            "hash": "0d3da9d50aa9c7d3a648ff4c1c7d2a46dc82911a4172e80ca95e4a7e3cd87364"
-        },
-        {
-            "date": 1707924314306,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-14-02-21-error.log",
-            "hash": "2b63928da6d984e8ae92f5da5e3c4fed042d46b27e9d8f0ac6edfe59bf6cff7f"
-        },
-        {
-            "date": 1707932188703,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-14-02-23-error.log",
-            "hash": "bf4ea7b0e4837de974b54f572ac365ea218d813eafd1a7aec40bc3babf225ea1"
-        },
-        {
-            "date": 1707935352228,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-15-02-00-error.log",
-            "hash": "cc518f63cd2c3d511e4b6e94fb4cdea184e1e576ecdd5e6a59c6de587e0420aa"
-        },
-        {
-            "date": 1707975552671,
-            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-15-02-11-error.log",
-            "hash": "09fa5a11581e4a1c8c5ad9ead06c8832845cabc643c10d2c027fb45eeb8f4d2f"
-        },
-        {
             "date": 1707984022042,
             "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-15-02-14-error.log",
             "hash": "a5ac03c208dcb281efdfd6c2bf1fa2165e4975cd3b3f831914afe1a717f17084"
@@ -329,6 +179,131 @@
             "date": 1708618767688,
             "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-22-02-22-error.log",
             "hash": "74f76bd61662005df4ab462800c7f5202ad492f6407cd7d2a61b11e6299859e7"
+        },
+        {
+            "date": 1708658707744,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-23-02-09-error.log",
+            "hash": "3123b1443cb70936f2f238f77c6c8f12023b60eeabd3b8bb051dabf47d8039fd"
+        },
+        {
+            "date": 1708677907222,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-23-02-14-error.log",
+            "hash": "affaf6096a01d694712fa9464efe1a857e45cbb9bb7a69009ed0cbffd7038d7d"
+        },
+        {
+            "date": 1708686776317,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-23-02-17-error.log",
+            "hash": "6b95c2181b6054a2ec53e5eab39308401a6dbe5e0db29405f75bfd1ead03c1d9"
+        },
+        {
+            "date": 1708691954482,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-23-02-18-error.log",
+            "hash": "afeb3694974bdc42692b205a4038f77f0989923601a6949d3a5f80d90e1a3593"
+        },
+        {
+            "date": 1708695144673,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-23-02-19-error.log",
+            "hash": "f5ce7d560cdfc4702a822883c33203f65f509d3e366d43a1502a54043a952cdd"
+        },
+        {
+            "date": 1708784038026,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-24-02-20-error.log",
+            "hash": "514a34ec559d66bea74567f77c7216b1baf85a6b6062d09dcc96ab2db47ed77e"
+        },
+        {
+            "date": 1708824787891,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-25-02-07-error.log",
+            "hash": "1ef13375de5cfcb46c4028b9083708458093b5061c544333ad787968768d89ea"
+        },
+        {
+            "date": 1708835661831,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-25-02-10-error.log",
+            "hash": "075021b6e6ba67f0cc0776b15535e7890cfe8a6e90fa5ceffcf82ad5b0e0b40f"
+        },
+        {
+            "date": 1708851924631,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-25-02-15-error.log",
+            "hash": "349965cff362848115538782e8db679309a35e9361dad4471f5817281e1479ef"
+        },
+        {
+            "date": 1708858449151,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-25-02-16-error.log",
+            "hash": "a8b9ca30dd7c1e68a86366ddde0ac6b39514415e0b2f50168b502f7e9dada2dd"
+        },
+        {
+            "date": 1708916281585,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-26-02-08-error.log",
+            "hash": "c6980ef23dfa8da22fc1d92619d68e7a2c731652745d8af27eb580f4bfcde924"
+        },
+        {
+            "date": 1708920654621,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-26-02-10-error.log",
+            "hash": "526e0a23449e678c72474eb04c5049e2dcbb7186076959b34ada83b7a61b775b"
+        },
+        {
+            "date": 1708941406554,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-26-02-15-error.log",
+            "hash": "40a2f4171c531f545a4391cfb7d91cb773520b96af8e70c1bff7131508dd0355"
+        },
+        {
+            "date": 1708961820864,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-26-02-21-error.log",
+            "hash": "7827d83e42106a14df2180b96e409106042ab85bcac2ff66403bd23dd31e7c4e"
+        },
+        {
+            "date": 1708965768652,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-26-02-22-error.log",
+            "hash": "de26e210b2e5d60eb23232613b01280152cfb60f0ae7d6ff28d54099f570df21"
+        },
+        {
+            "date": 1709015342491,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-27-02-12-error.log",
+            "hash": "5ca83e300bbcb0215483f8920f942de71b5603c3cc86ae1ea9417e40e3d971c1"
+        },
+        {
+            "date": 1709039347006,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-27-02-19-error.log",
+            "hash": "a19770b2258fd4edc8ef32eb1f1688dc5c50156351d592c54e1434a938b2f22a"
+        },
+        {
+            "date": 1709047796151,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-27-02-21-error.log",
+            "hash": "b7127024a861ba51521af50e6ec8eb8b27cfd593dff0b41e7b9b76d052c2ba01"
+        },
+        {
+            "date": 1709054888712,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-27-02-23-error.log",
+            "hash": "e394952964d894ad79dc6c47d1dc6f5a9554c1b97bb80c093e089671f6272e81"
+        },
+        {
+            "date": 1709106178265,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-28-02-13-error.log",
+            "hash": "84e26df0853c6b8e7049e38215cfdfc59316019b387fa27d2fa64395c8e6255d"
+        },
+        {
+            "date": 1709107240782,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-28-02-14-error.log",
+            "hash": "e3812374f8e9d9f7ae58879073834636244c4800cac25c243eb00ca1995ef122"
+        },
+        {
+            "date": 1709175101708,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-29-02-08-error.log",
+            "hash": "e7910bde1a8e8c189c8be1f1d88d16617f049ce49bf1fac0b271b80a4af3d720"
+        },
+        {
+            "date": 1709176146523,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-29-02-09-error.log",
+            "hash": "0560e475ba2eb6243764e88d3262419180d83702d61b95f5c6a80d0fb64f74ea"
+        },
+        {
+            "date": 1709180382826,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-29-02-10-error.log",
+            "hash": "95daa7689d7797b9148723283c7df1d2b16b81b134154cd491d830e544ecfd50"
+        },
+        {
+            "date": 1709187874258,
+            "name": "E:\\project-resume\\zaranit\\zaran-it-backend-postgres\\logs\\winston\\errors\\zaran-it-2024-29-02-12-error.log",
+            "hash": "d15dbdeb546d815346d0b43eb1d53ed3ad2612581c5e41c5c665b703dbc8bfbc"
         }
     ],
     "hashType": "sha256"

@@ -77,6 +77,17 @@ const getAllEmailRecord = async (
   };
 };
 
+const getSingleEmailRecord = async (
+  id: string
+): Promise<EmailRecord | null> => {
+  const result = await prisma.emailRecord.findUnique({
+    where: {
+      id: id,
+    },
+  });
+  return result;
+};
+
 const deleteEmailRecord = async (id: string): Promise<EmailRecord> => {
   const result = await prisma.emailRecord.delete({
     where: {
@@ -89,5 +100,6 @@ const deleteEmailRecord = async (id: string): Promise<EmailRecord> => {
 export const EmailRecordService = {
   createEmailRecord,
   getAllEmailRecord,
+  getSingleEmailRecord,
   deleteEmailRecord,
 };
