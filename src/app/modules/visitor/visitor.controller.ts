@@ -6,7 +6,7 @@ import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
 import { visitorFilterableFields } from './visitor.constant';
 import { VisitorService } from './visitor.service';
-
+ 
 const createVisitor = catchAsync(async (req: Request, res: Response) => {
   const result = await VisitorService.createVisitor(req.body);
   sendResponse(res, {

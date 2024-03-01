@@ -10,7 +10,7 @@ import { IVisitorFilters } from './visitor.interface';
 const createVisitor = async (visitorData: Visitor): Promise<Visitor> => {
   const result = await prisma.visitor.create({
     data: visitorData,
-  });
+  }); 
   return result;
 };
 
