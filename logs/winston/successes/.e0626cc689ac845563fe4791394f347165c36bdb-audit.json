@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\successes\\.e0626cc689ac845563fe4791394f347165c36bdb-audit.json",
+    "files": [
+        {
+            "date": 1709281873818,
+            "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\successes\\SoftSync-INC-2024-01-03-14-success.log",
+            "hash": "1b86a9ea523f6fcda9e5470d61ac3df1b53dde422e38549ccf09474064e5ebba"
+        }
+    ],
+    "hashType": "sha256"
+}

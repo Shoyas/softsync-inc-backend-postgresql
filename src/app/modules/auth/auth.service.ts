@@ -74,7 +74,7 @@ const getSingleAdminByToken = async (
 
   return result;
 };
-
+ 
 const changePassword = async (
   admin: JwtPayload | null,
   payload: IChangePassword

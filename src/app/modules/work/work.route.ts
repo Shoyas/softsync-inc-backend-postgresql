@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.get('/:id', WorkController.getSingleWork);
 router.get('/', WorkController.getAllWork);
-router.post(
+router.post( 
   '/create-work',
   auth(ENUM_ADMIN_ROLE.ADMIN, ENUM_ADMIN_ROLE.SUPER_ADMIN),
   FileUploadHelper.upload.single('file'),

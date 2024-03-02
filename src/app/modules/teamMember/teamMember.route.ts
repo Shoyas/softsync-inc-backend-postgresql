@@ -6,7 +6,7 @@ import validateRequest from '../../middlewares/validateRequest';
 import { TeamMemberController } from './teamMember.controller';
 import { TeamMemberValidation } from './teamMember.validation';
 
-const router = express.Router();
+const router = express.Router(); 
 
 router.get('/:id', TeamMemberController.getSingleTeamMember);
 router.get('/', TeamMemberController.getAllTeamMember);

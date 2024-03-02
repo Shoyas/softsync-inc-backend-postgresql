@@ -9,7 +9,7 @@ import { teamMemberFilterableFields } from './teamMember.constant';
 import { TeamMemberService } from './teamMember.service';
 
 const createTeamMember = catchAsync(async (req: Request, res: Response) => {
-  const payload = req.body;
+  const payload = req.body; 
   const file = req.file as IUploadFile;
   const result = await TeamMemberService.createTeamMember(payload, file);
   sendResponse(res, {
