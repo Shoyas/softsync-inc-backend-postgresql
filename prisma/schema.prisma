@@ -131,7 +131,7 @@ model EmailRecord {
 model Visitor {
   id           String   @id @default(uuid())
   ip           String
-  browser_name String? //! Visitor_info
+  browser_name String? 
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
