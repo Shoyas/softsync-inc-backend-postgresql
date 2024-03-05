@@ -69,6 +69,31 @@
             "date": 1709534130310,
             "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\errors\\SoftSync-INC-2024-04-03-12-error.log",
             "hash": "db9b8a14b1456b32b3b8074550f463b4b5ba46f64bc6f8a231a8b511a0f82cc9"
+        },
+        {
+            "date": 1709568842862,
+            "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\errors\\SoftSync-INC-2024-04-03-22-error.log",
+            "hash": "333258deb45a0a2e47396d605604795c09198ff3a09a19937513ef9fb0e3ab32"
+        },
+        {
+            "date": 1709608009894,
+            "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\errors\\SoftSync-INC-2024-05-03-09-error.log",
+            "hash": "e516d8cdf94afa8b60f4c9b01c3375fc53aa5efa8d401ddc65d9534a9cf4f5d8"
+        },
+        {
+            "date": 1709612476661,
+            "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\errors\\SoftSync-INC-2024-05-03-10-error.log",
+            "hash": "de4942563bbcd931eb3cb219a39434dac89d9dd47335797e6edc90edf323cd92"
+        },
+        {
+            "date": 1709617098773,
+            "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\errors\\SoftSync-INC-2024-05-03-11-error.log",
+            "hash": "419fd8eaa677c1671cc325e12e87b69a5066313080d471b4ac780a9ab93920d8"
+        },
+        {
+            "date": 1709619690635,
+            "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\errors\\SoftSync-INC-2024-05-03-12-error.log",
+            "hash": "207b1883c89662242fc2c9e038c8515ea5d92fd04c17335eb37086b90c5b9a1c"
         }
     ],
     "hashType": "sha256"
