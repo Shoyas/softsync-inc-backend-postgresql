@@ -12,8 +12,8 @@ const emailRecord_route_1 = require("../modules/emailRecord/emailRecord.route");
 const founder_route_1 = require("../modules/founder/founder.route");
 const service_route_1 = require("../modules/service/service.route");
 const teamMember_route_1 = require("../modules/teamMember/teamMember.route");
-const visitor_route_1 = require("../modules/visitor/visitor.route");
 const work_route_1 = require("../modules/work/work.route");
+const visitor_route_1 = require("./../modules/visitor/visitor.route");
 const router = express_1.default.Router();
 const moduleRoutes = [
     {

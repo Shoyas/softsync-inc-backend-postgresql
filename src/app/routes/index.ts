@@ -7,8 +7,8 @@ import { EmailRecordRoute } from '../modules/emailRecord/emailRecord.route';
 import { FounderRoute } from '../modules/founder/founder.route';
 import { ServiceRoute } from '../modules/service/service.route';
 import { TeamMemberRoute } from '../modules/teamMember/teamMember.route';
-import { VisitorRoute } from '../modules/visitor/visitor.route';
 import { WorkRoute } from '../modules/work/work.route';
+import { VisitorRoute } from './../modules/visitor/visitor.route';
 
 const router = express.Router();
 
