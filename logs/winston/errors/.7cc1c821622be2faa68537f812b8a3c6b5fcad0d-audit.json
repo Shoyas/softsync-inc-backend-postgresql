@@ -94,6 +94,11 @@
             "date": 1709619690635,
             "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\errors\\SoftSync-INC-2024-05-03-12-error.log",
             "hash": "207b1883c89662242fc2c9e038c8515ea5d92fd04c17335eb37086b90c5b9a1c"
+        },
+        {
+            "date": 1709723072497,
+            "name": "E:\\project-resume\\softsyncinc\\softsyncinc-backend-postgres\\logs\\winston\\errors\\SoftSync-INC-2024-06-03-17-error.log",
+            "hash": "a5028f53b00e694a0ebe43e64f2bec7ba1eb75112d04fc08f764f7c52b54826d"
         }
     ],
     "hashType": "sha256"
