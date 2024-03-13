@@ -6,18 +6,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const config_1 = __importDefault(require("../../config"));
 const ApiError_1 = __importDefault(require("../../errors/ApiError"));
 const handleValidationError_1 = __importDefault(require("../../errors/handleValidationError"));
+const client_1 = require("@prisma/client");
 const zod_1 = require("zod");
 const handleCastError_1 = __importDefault(require("../../errors/handleCastError"));
 const handleZodError_1 = __importDefault(require("../../errors/handleZodError"));
-const logger_1 = require("../../shared/logger");
+// import { errorlogger } from '../../shared/logger';
 const globalErrorHandler = (error, req, res, next) => {
     config_1.default.env === 'development'
-        ? console.log(`🐱‍🏍 globalErrorHandler ~~`, { error })
-        : logger_1.errorlogger.error(`🐱‍🏍 globalErrorHandler ~~`, error);
+        ? console.info(`🐱‍🏍 globalErrorHandler ~~`, { error })
+        : // : errorlogger.error(`🐱‍🏍 globalErrorHandler ~~`, error);
+            console.error(`🐱‍🏍 globalErrorHandler ~~`, error);
     let statusCode = 500;
     let message = 'Something went wrong !';
     let errorMessages = [];
-    if ((error === null || error === void 0 ? void 0 : error.name) === 'ValidationError') {
+    if (error instanceof client_1.Prisma.PrismaClientValidationError) {
         const simplifiedError = (0, handleValidationError_1.default)(error);
         statusCode = simplifiedError.statusCode;
         message = simplifiedError.message;
@@ -29,7 +31,7 @@ const globalErrorHandler = (error, req, res, next) => {
         message = simplifiedError.message;
         errorMessages = simplifiedError.errorMessages;
     }
-    else if ((error === null || error === void 0 ? void 0 : error.name) === 'CastError') {
+    else if (error instanceof client_1.Prisma.PrismaClientKnownRequestError) {
         const simplifiedError = (0, handleCastError_1.default)(error);
         statusCode = simplifiedError.statusCode;
         message = simplifiedError.message;
