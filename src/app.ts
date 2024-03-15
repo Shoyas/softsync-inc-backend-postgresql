@@ -4,17 +4,23 @@ import httpStatus from 'http-status';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import routes from './app/routes';
 
-import cookieParser from 'cookie-parser'; 
+import cookieParser from 'cookie-parser';
 
 const app: Application = express();
 
 //! cors add for frontend api to server api connection. This will be change after final deploy link
 app.use(
   cors({
-    origin: ['http://localhost:3000' || 'https://www.softsyncinc.com'],
+    origin: [
+      'http://localhost:3000' ||
+        'https://softsyncinc.com/' ||
+        'https://www.softsyncinc.com' ||
+        'http://softsyncinc.com',
+    ],
     credentials: true,
   })
 );
+
 app.use(cookieParser());
 
 //! parser
