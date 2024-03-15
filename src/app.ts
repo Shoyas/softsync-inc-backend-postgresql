@@ -13,7 +13,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000' ||
-        'https://softsyncinc.com/' ||
+        'https://softsyncinc.com' ||
         'https://www.softsyncinc.com' ||
         'http://softsyncinc.com',
     ],
