@@ -21,7 +21,7 @@ const app: Application = express();
 //   })
 // );
 
-// if it does not work then use *  instead of [] which means to access all the servers time for check purposes 
+app.use(cors())
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin','*' );
@@ -30,6 +30,7 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
+
 
 app.use(cookieParser());
 
