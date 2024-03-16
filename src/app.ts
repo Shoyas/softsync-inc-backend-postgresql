@@ -31,6 +31,8 @@ app.use(function(req, res, next) {
     next();
 });
 
+console.log(1)
+
 
 app.use(cookieParser());
 
