@@ -24,12 +24,7 @@ const app: Application = express();
 // if it does not work then use *  instead of [] which means to access all the servers time for check purposes 
 
 app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', [
-        'http://localhost:3000' ||
-        'https://softsyncinc.com' ||
-        'https://www.softsyncinc.com' ||
-        'http://softsyncinc.com']
-    );
+    res.setHeader('Access-Control-Allow-Origin','*' );
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     res.setHeader('Access-Control-Allow-Credentials', true);
