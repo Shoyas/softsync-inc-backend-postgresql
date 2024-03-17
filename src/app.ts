@@ -11,7 +11,7 @@ const app: Application = express();
 //! cors add for frontend api to server api connection. This will be change after final deploy link
 app.use(
   cors({
-    origin: ['https://softsyncinc.com'],
+    origin: 'https://softsyncinc.com',
     credentials: true,
   })
 );
