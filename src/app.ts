@@ -11,27 +11,10 @@ const app: Application = express();
 //! cors add for frontend api to server api connection. This will be change after final deploy link
 app.use(
   cors({
-    origin: [
-     
-        'https://softsyncinc.com'
-      
-    ],
+    origin: ['https://softsyncinc.com'],
     credentials: true,
   })
 );
-
-// app.use(cors())
-
-// app.use(function(req, res, next) {
-//     res.setHeader('Access-Control-Allow-Origin','*' );
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH');
-//     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-//     res.setHeader('Access-Control-Allow-Credentials', true);
-//     next();
-// });
-
-// console.log(1)
-
 
 app.use(cookieParser());
 
