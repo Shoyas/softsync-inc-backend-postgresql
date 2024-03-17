@@ -12,7 +12,7 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const app = (0, express_1.default)();
 //! cors add for frontend api to server api connection. This will be change after final deploy link
 app.use((0, cors_1.default)({
-    origin: "*",
+    origin: "https://softsyncinc.com",
     credentials: true,
 }));
 app.use((0, cookie_parser_1.default)());
